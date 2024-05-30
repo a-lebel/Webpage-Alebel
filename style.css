@@ -43,7 +43,7 @@ nav ul {
 }
 
 li {
-    padding: 0 1.8rem;
+    padding: 0 0 0 1.8rem;
     cursor: pointer;
 }
 
@@ -68,35 +68,17 @@ a:visited {
     }
 }
 
-/* Scrolling Text */
-
-.scrolling_text {
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    white-space: nowrap;
-}
-
-.textscroll {
-    font-size: 12rem;
-    font-family: Anton;
-    text-transform: uppercase;
-    color: #F6F6F6;
-    white-space: nowrap;
-}
-
-.text span {
-    margin: 0 15px;
-}
 
 
 /* General Styling */
 
 
 h1 {
-    font-family: Ubuntu;
-    font-size: 3.12rem;
-    color: #A1998A;
+    font-family: Anton;
+    font-size: 7.8rem;
+    color: #f6f6f6;
+    margin-block-start: 5rem;
+    margin-block-end: 2rem;
 }
 
 h2 {
@@ -131,19 +113,37 @@ button {
 /* Header */
 
 header {
-    display: inline-flex;
-    margin: 0 16%;
-    justify-content: space-between;
-    align-items: flex-start; /* Align items to the top */
+    display: flex;
+    margin: 0 15%;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute space between items */ 
+}
+
+.textsheader {
+    flex: 1; /* Allow .textsheader to take up available space */
+    display: flex;
     flex-wrap: wrap;
 }
 
-.socialhome {
-    min-width: 32%;
-    width: 100;
-    padding-right: 15%;
-    margin-top: 1.5rem;
+.title {
+    width: 100%;
+    display: flex;
+    text-transform: uppercase;
+    line-height: 7.8rem;
+    margin:0;
+    transition: color 0.3s ease, font-size 0.3s ease;
 }
+
+
+.socialhome {
+    min-width: 20%;
+    margin-top: 5rem;
+    align-items: flex-end;
+    text-align: right;
+    padding-left: 5rem;
+}
+
+
 
 .sociallogos {
     display: inline-flex;
@@ -151,21 +151,39 @@ header {
 }
 
 .sociallogos a {
-    padding-right: 1.5rem;
+    padding-left: 1.5rem;
     padding-top: 1.5rem;
 }
 
 .bienvenida {
-    width: 40%;
-    flex: 1 1 auto; /* Allow the bienvenida element to grow if there's extra space */
+    max-width: 60%;
     min-width: 320px; /* Minimum width to maintain */
-    margin-right: 10rem; /* Keep the margin-right as needed */
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+    margin-right: 15%
 }
+
+@media (max-width: 1300px) {
+
+    .socialhome {
+        display: none;
+    }}
+
 
 @media (max-width: 900px) {
 
+
+
+    .title h1 {
+        font-size: 4rem;
+        line-height: 4rem;
+        transition: color 0.3s ease, font-size 0.3s ease;
+    }
+
     .bienvenida {
         width: 100%;
+        margin-right: 15%;
     }
 }
 
@@ -174,11 +192,19 @@ header {
 /* Projects */
 
 
-.projects {
+.projects1 {
     margin: 10% 15%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.projects2 {
+    margin: 10% 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row-reverse;
 }
 
 .projecttexts {
@@ -223,7 +249,47 @@ header {
     margin-left: 10rem;
 }
 
-#desarrollo, #web {
+.diseñoGrafico {
+
+}
+
+#diseño {
+    font-family: Anton;
+    font-size: 8.75rem;
+    color: #F6F6F6;
+    text-transform: uppercase;
+}
+
+#grafico {
+    font-family: Anton;
+    font-size: 10rem;
+    text-transform: uppercase;
+    line-height: 7rem;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #A1998A;
+    margin-left: -5rem;
+}
+
+.videodiseño {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    min-width: 320px;
+    height: 690px;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.videodiseño video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#desarrollo, #web, #diseño, #grafico {
     transition: color 0.3s ease, font-size 0.3s ease;
 }
 
@@ -245,6 +311,29 @@ header {
 
    .projects {
     flex-direction: column;
+}
+
+#diseño {
+    font-size: 4rem;
+   }
+
+#grafico {
+    font-size: 4rem;
+    line-height: 2rem;
+    margin-left: 0;
+   }
+
+.videodiseño {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    min-width: 320px;
+    height: 300px;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 5rem;
+    transition: transform 0.3s ease; /* Added transition property */
 }
 
 .imagedesarrollo {
@@ -475,7 +564,8 @@ footer {
     max-width: 380px;
     flex: 1 1 auto; /* Allows containers to grow and shrink as needed */
     overflow: hidden;
-    margin-top: 50px;
+    margin: 50px 10px;
+
 }
 
 .projectContainer hr {
