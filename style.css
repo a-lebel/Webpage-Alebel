@@ -11,6 +11,8 @@ body {
     overflow-x: hidden; /* Corrected property name */
 }
 
+
+
 /* Nav */
 
 nav {
@@ -66,6 +68,8 @@ a:visited {
     nav ul {
         justify-content: center;
     }
+
+
 }
 
 
@@ -184,6 +188,10 @@ header {
     .bienvenida {
         width: 100%;
         margin-right: 15%;
+    }
+
+    header {
+        margin: 0 5%;
     }
 }
 
@@ -324,7 +332,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 55%;
+    width: 100%;
     min-width: 320px;
     height: 300px;
     overflow: hidden;
@@ -337,7 +345,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 55%;
+    width: 100%;
     min-width: 320px;
     height: 300px;
     overflow: hidden;
@@ -355,6 +363,26 @@ header {
     
 }
 
+@media (max-width: 900px) {
+    .projects1 {
+        margin: 10% 5%;
+    }
+
+    .projects2 {
+        margin: 10% 5%;
+    } 
+
+    .videodiseño {
+        width: 100%;
+        transition: transform 0.3s ease; /* Added transition property */
+    }
+    
+    .imagedesarrollo {
+    width:100%;
+        transition: transform 0.3s ease; /* Added transition property */
+    }
+}
+
 /* Clientes */
 
 .clients {
@@ -370,6 +398,13 @@ header {
 
 .clientslogos img {
     width: 140px;
+}
+
+@media (max-width: 900px) {
+    .clients {
+        margin: 10% 5%;
+    }
+
 }
 
 /* Contacto */
@@ -488,13 +523,20 @@ label {
     }
 
     form {
-        width: 100%;
+        min-width: 100%;
         margin: 0;
     }
 
     .titleandform {
         justify-content: flex-start;
     } 
+}
+
+@media (max-width: 900px) {
+    #contactoseccion {
+        margin: 10% 5%;
+    }
+
 }
 
 /* Footer */
@@ -529,6 +571,12 @@ footer {
     flex-grow: 1; /* Allow ul to grow and take up available space */
 }
 
+@media (max-width: 900px) {
+    footer {
+        margin: 10% 5%;
+    }
+
+}
 
 @media (max-width: 480px) {
     footer {
@@ -536,7 +584,6 @@ footer {
         justify-content: center;
         align-items: center;
         flex-direction: column; /* Align items vertically on small screens */
-        margin: 0; /* Reset margin for smaller screens */
     }
 
     .socialfooter {
@@ -587,4 +634,12 @@ footer {
     font-family: Ubuntu;
     font-size: 1.25rem;
     margin-top: 2rem;
+}
+
+@media (max-width: 480px) {
+    .projectGallery {
+        margin: 0 5%;
+    } 
+
+
 }
