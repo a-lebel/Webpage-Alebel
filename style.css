@@ -1,0 +1,503 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background: linear-gradient(132deg, #302D2D 0%, #171819 100%);
+    overflow-x: hidden; /* Corrected property name */
+}
+
+/* Nav */
+
+nav {
+    display: flex;  
+    margin-top: 1.8rem;
+    width: 100%;
+    justify-content: center; /* Centers the nav content */
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.logo {
+    width: 4.8rem;
+    height: auto;
+    margin-left: 15%; /* Align with body margin */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    display: flex; /* Set ul as a flex container */
+    font-family: Ubuntu;
+    font-size: 1rem;
+    list-style: none;
+    color: #F6F6F6;
+    justify-content: flex-end; /* Align items to the end */
+    margin: 0 15%; /* Align with body margin */
+    padding: 0; /* Reset default padding */
+    flex-grow: 1; /* Allow ul to grow and take up available space */
+}
+
+li {
+    padding: 0 1.8rem;
+    cursor: pointer;
+}
+
+li:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #F6F6F6;
+    text-decoration: none;
+}
+
+
+@media (max-width: 480px) {
+
+    .logo {
+        margin: 5rem auto; /* Center horizontally with 5rem margin on top and bottom */
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+}
+
+/* Scrolling Text */
+
+.scrolling_text {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+}
+
+.textscroll {
+    font-size: 12rem;
+    font-family: Anton;
+    text-transform: uppercase;
+    color: #F6F6F6;
+    white-space: nowrap;
+}
+
+.text span {
+    margin: 0 15px;
+}
+
+
+/* General Styling */
+
+
+h1 {
+    font-family: Ubuntu;
+    font-size: 3.12rem;
+    color: #A1998A;
+}
+
+h2 {
+    font-family: Ubuntu;
+    color: #f6f6f6;
+    font-size: 1.25rem;
+}
+
+p {
+    font-family: Ubuntu;
+    font-size: 1rem;
+    color: #f6f6f6;
+}
+
+button {
+    padding: 1.56rem 3.12rem;
+    background-color: #A1998A;
+    color: #000000;
+    font-family: Ubuntu;
+    font-size: 1.25rem;
+    border-radius: 0.6rem;
+    border: none;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.line {
+    border-bottom: 1px solid #f6f6f6;
+    width: 30%;
+}
+
+/* Header */
+
+header {
+    display: inline-flex;
+    margin: 0 16%;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap;
+}
+
+.socialhome {
+    min-width: 32%;
+    width: 100;
+    padding-right: 15%;
+    margin-top: 1.5rem;
+}
+
+.sociallogos {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.sociallogos a {
+    padding-right: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.bienvenida {
+    width: 40%;
+    flex: 1 1 auto; /* Allow the bienvenida element to grow if there's extra space */
+    min-width: 320px; /* Minimum width to maintain */
+    margin-right: 10rem; /* Keep the margin-right as needed */
+}
+
+@media (max-width: 900px) {
+
+    .bienvenida {
+        width: 100%;
+    }
+}
+
+
+
+/* Projects */
+
+
+.projects {
+    margin: 10% 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.projecttexts {
+    width: 40%;
+    min-width: 320px;
+    z-index: 1;
+}
+
+.imagedesarrollo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    min-width: 320px;
+    height: 690px;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.imagedesarrollo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#desarrollo {
+    font-family: Anton;
+    font-size: 8.75rem;
+    color: #F6F6F6;
+    text-transform: uppercase;
+}
+
+#web {
+    font-family: Anton;
+    font-size: 12.5rem;
+    text-transform: uppercase;
+    line-height: 7rem;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #A1998A;
+    margin-left: 10rem;
+}
+
+#desarrollo, #web {
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+.projecttexts h2 {
+    margin-top: 2rem;
+}
+
+@media (max-width: 1200px) {
+
+   #desarrollo {
+    font-size: 4rem;
+   }
+
+   #web {
+    font-size: 4rem;
+    line-height: 2rem;
+    margin-left: 0;
+   }
+
+   .projects {
+    flex-direction: column;
+}
+
+.imagedesarrollo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    min-width: 320px;
+    height: 300px;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 5rem;
+    transition: transform 0.3s ease; /* Added transition property */
+}
+
+
+.projecttexts {
+    width: 100%;
+    min-width: 320px;
+    z-index: 1;
+}
+    
+}
+
+/* Clientes */
+
+.clients {
+    margin: 10% 15%;
+}
+
+.clientslogos {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.clientslogos img {
+    width: 140px;
+}
+
+/* Contacto */
+
+#contactoseccion {
+    margin: 10% 15%;
+}
+
+#contactoseccion hr {
+    width: 25%;
+    margin-left: 0;
+}
+
+.titleandform {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ponteencontacto {
+    width: 100%;
+    max-width: 50%;
+}
+
+form {
+    width: 100%;
+    max-width: 50%;
+    min-width: 320px;
+    margin-left: auto;
+
+}
+
+#ponteen {
+    font-family: Anton;
+    font-size: 6rem;
+    color: #F6F6F6;
+    text-transform: uppercase;
+}
+
+#contacto {
+    font-family: Anton;
+    font-size: 8rem;
+    text-transform: uppercase;
+    line-height: 5rem;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #A1998A;
+    margin-left: 5rem;
+}
+
+input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+    box-sizing: border-box;
+    border: 1px solid #A1998A;
+    background-color: #302D2D;
+    border-radius: 5px;
+    color: #F6F6F6;
+    outline: none;
+}
+
+input:focus {
+    border: 3px solid #A1998A;
+  }
+
+input[type=submit] {
+    padding: 1.56rem 3.12rem;
+    background-color: #A1998A;
+    color: #000000;
+    font-family: Ubuntu;
+    font-size: 1.25rem;
+    border-radius: 0.6rem;
+    border: none;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+textarea {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+    box-sizing: border-box;
+    border: 1px solid #A1998A;
+    background-color: #302D2D;
+    border-radius: 5px;
+    color: #F6F6F6;
+    resize: none;
+    outline: none;
+}
+
+textarea:focus {
+    border: 3px solid #A1998A;
+  }
+
+label {
+    font-family: Ubuntu;
+    font-size: 1rem;
+    color: #f6f6f6;
+    margin-bottom: 5rem;
+}
+
+@media (max-width: 1200px) {
+
+    #ponteen {
+     font-size: 4rem;
+     white-space: nowrap;
+    }
+ 
+    #contacto {
+     font-size: 4rem;
+     line-height: 2rem;
+     margin-left: 0;
+     -webkit-text-stroke-width: 1px;
+  
+    }
+
+    form {
+        width: 100%;
+        margin: 0;
+    }
+
+    .titleandform {
+        justify-content: flex-start;
+    } 
+}
+
+/* Footer */
+
+footer {
+    margin:0 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socialfooter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.socialfooter a {
+    padding-right: 1.5rem;
+}
+
+.footertext ul{
+    display: flex; /* Set ul as a flex container */
+    flex-wrap: wrap;
+    font-family: Ubuntu;
+    font-size: 0.9rem;
+    list-style: none;
+    color: #A1998A;
+    justify-content: flex-end; /* Align items to the end */
+    padding: 0; /* Reset default padding */
+    flex-grow: 1; /* Allow ul to grow and take up available space */
+}
+
+
+@media (max-width: 480px) {
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /* Align items vertically on small screens */
+        margin: 0; /* Reset margin for smaller screens */
+    }
+
+    .socialfooter {
+        margin-bottom: 1rem; /* Add space between social icons and text on small screens */
+    }
+
+    .footertext ul {
+        text-align: center; /* Center-align text */
+    }
+}
+
+/*Desarrollo Web Gallery*/
+
+.projectGallery {
+    margin: 0 15%;
+    display: flex; /* Changed inline-flex to flex */
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.projectContainer {
+    max-width: 380px;
+    flex: 1 1 auto; /* Allows containers to grow and shrink as needed */
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.projectContainer hr {
+    width: 100%;
+    margin-left: 0;
+}
+
+.projectContainer img {
+    margin-top: 15px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.projectContainer p {
+    width: 100%;
+}
+
+.projectContainer a {
+    font-family: Ubuntu;
+    font-size: 1.25rem;
+    margin-top: 2rem;
+}
