@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    background: #302D2D;
+    background: #F2EDE6;
     overflow-x: hidden; /* Corrected property name */
 }
 
@@ -23,7 +23,7 @@ nav {
     flex-wrap: wrap;
     align-items: center;
     position: fixed;
-    background-color: #302D2D;
+    background-color: #F2EDE6;
     z-index: 3;
     top: 0;
 }
@@ -41,7 +41,7 @@ nav ul {
     font-family: Ubuntu;
     font-size: 1rem;
     list-style: none;
-    color: #F6F6F6;
+    color: #262626;
     justify-content: flex-end; /* Align items to the end */
     margin: 0 15%; /* Align with body margin */
     padding: 0; /* Reset default padding */
@@ -58,23 +58,36 @@ li:hover {
 }
 
 a:visited {
-    color: #F6F6F6;
+    color: #262626;
     text-decoration: none;
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 635px) {
+
+    nav {
+        justify-content: center; /* Corrected property value */
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
 
     .logo {
-        margin: 5rem auto; /* Center horizontally with 5rem margin on top and bottom */
+        margin: 1rem auto; /* Reduced margin to ensure better centering */
     }
 
     nav ul {
         justify-content: center;
+        margin: 0; /* Removed margin to avoid pushing items away from the center */
+        padding: 0; /* Ensure padding is reset */
     }
 
-
+    li {
+        padding: 0.5rem; /* Ensure padding is reduced for smaller screens */
+    }
 }
+
+
 /*Animations*/
 
 
@@ -128,23 +141,41 @@ a:visited {
       }
 }
 
+@keyframes highlight-me {
+    from {
+        background-size: 0% 100%;
+      }
+      to {
+        background-size: 100% 100%;
+      }
+    }
+
 /* General Styling */
 
 
 h1 {
-    font-family: Anton;
+    font-family: Oswald;
     font-size: 7.8rem;
-    color: #f6f6f6;
+    color: #262626;
     margin-block-start: 5rem;
     margin-block-end: 2rem;
-    letter-spacing: 0.1rem;
-    animation: entradaIzq 0.5s ease-in-out;
+    animation: slideup 1s;
+}
+
+h1 span {
+        color: #262626;
+        animation-name: highlight-me;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        background: linear-gradient(to right, #FDDC05 0%, #FDDC05 100%);
+        background-repeat: no-repeat;
+        background-size: 0% 100%;
 }
 
 
 h2 {
     font-family: Ubuntu;
-    color: #f6f6f6;
+    color: #262626;
     font-size: 1.25rem;
  
 }
@@ -155,32 +186,37 @@ h2 {
 p {
     font-family: Ubuntu;
     font-size: 1rem;
-    color: #f6f6f6;
+    color: #262626;
 }
 
 
 button {
     padding: 1.56rem 3.12rem;
-    background-color: #A1998A;
-    color: #000000;
+    background-color: #FDDC05;
+    color: #262626;
     font-family: Ubuntu;
     font-size: 1.25rem;
     border-radius: 0.6rem;
     border: none;
     margin-top: 2rem;
     cursor: pointer;
-    transition-duration: 0.4s;
+    transition-duration: 0.2s;
     box-sizing: border-box;
 }
 
 button:hover {
-    background-color: #302D2D;
-    border: 1.5px solid #A1998A;
-    color: #ffffff;
+    background-color: #FDDC05;
+    color: #FDDC05;
+    animation-name: highlight-me;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    background: linear-gradient(to right, #262626 0%, #262626 100%);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
 }
 
 .line {
-    border-bottom: 1px solid #f6f6f6;
+    border-bottom: 1px solid #262626;
     width: 30%;
 }
 
@@ -239,7 +275,14 @@ header {
     display: flex;
     flex-wrap: wrap;
     margin-top: 0;
-    margin-right: 15%
+    margin-right: 15%;
+    flex-direction: column; /* Ensure vertical stacking of children */
+    align-items: left; 
+}
+
+.scrollicon {
+    display: block;
+    margin-top: 4rem;
 }
 
 @media (max-width: 1300px) {
@@ -331,51 +374,61 @@ header {
 }
 
 #desarrollo {
-    font-family: Anton;
+    font-family: Oswald;
+    font-weight: 700;
+    letter-spacing: -0.3rem;
     font-size: 8.75rem;
-    color: #F6F6F6;
+    color: #262626;
     text-transform: uppercase;
 }
 
 #web {
-    font-family: Anton;
+    font-family: Oswald;
+    font-weight: 700;
+    letter-spacing: -0.3rem;
     font-size: 12.5rem;
     text-transform: uppercase;
     line-height: 7rem;
     color: transparent;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #A1998A;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #595959;
     margin-left: 10rem;
 }
 
 
 #diseño {
-    font-family: Anton;
+    font-family: Oswald;
+    font-weight: 700;
+    letter-spacing: -0.4rem;
     font-size: 8.75rem;
-    color: #F6F6F6;
+    color: #262626;
     text-transform: uppercase;
     white-space: nowrap;
 }
 
 #grafico {
-    font-family: Anton;
+    font-family: Oswald;
+    font-weight: 700;
+    letter-spacing: -0.3rem;
     font-size: 10rem;
     text-transform: uppercase;
-    line-height: 7rem;
+    line-height: 5rem;
     color: transparent;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #A1998A;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #595959;
     margin-left: -5rem;
 }
 
 #ui {
-    font-family: Anton;
+    font-family: Oswald;
+    font-weight: 700;
+    letter-spacing: -0.5rem;
     font-size: 8.75rem;
     text-transform: uppercase;
-    line-height: 7rem;
+    line-height: 3rem;
     color: transparent;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #A1998A;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #595959;
     margin-left: 2rem;
 
 }
@@ -407,16 +460,18 @@ header {
 }
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
 
    #desarrollo {
     font-size: 4rem;
+    letter-spacing: 0rem;
    }
 
    #web {
     font-size: 4rem;
     line-height: 2rem;
     margin-left: 0;
+    letter-spacing: 0rem;
    }
 
    .projects {
@@ -425,18 +480,21 @@ header {
 
 #diseño {
     font-size: 4rem;
+    letter-spacing: 0rem;
    }
 
 #grafico {
     font-size: 4rem;
     line-height: 2rem;
     margin-left: 0;
+    letter-spacing: 0rem;
    }
 
    #ui {
     font-size: 4rem;
     line-height: 2rem;
     margin-left: 0;
+    letter-spacing: 0rem;
    }
 
 .videoshome {
@@ -558,21 +616,23 @@ form {
 }
 
 #ponteen {
-    font-family: Anton;
+    font-family: Oswald;
+    font-weight: 700;
     font-size: 6rem;
-    color: #F6F6F6;
+    color: #262626;
     text-transform: uppercase;
 }
 
 #contacto {
-    font-family: Anton;
-    font-size: 8rem;
+    font-family: Oswald;
+    font-weight: 700;
+    font-size: 7rem;
     text-transform: uppercase;
-    line-height: 5rem;
+    line-height: 4rem;
     color: transparent;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #A1998A;
-    margin-left: 5rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color:#262626;
+    margin-left: 2rem;
 }
 
 input {
@@ -580,21 +640,21 @@ input {
     padding: 1rem 1.5rem;
     margin: 1rem 0;
     box-sizing: border-box;
-    border: 1px solid #A1998A;
-    background-color: #302D2D;
+    border: 1px solid #262626;
+    background-color: #F2EDE6;
     border-radius: 5px;
-    color: #F6F6F6;
+    color: #262626;
     outline: none;
 }
 
 input:focus {
-    border: 3px solid #A1998A;
+    border: 3px solid #FDDC05;
   }
 
 input[type=submit] {
     padding: 1.56rem 3.12rem;
-    background-color: #A1998A;
-    color: #000000;
+    background-color: #FDDC05;
+    color: #262626;
     font-family: Ubuntu;
     font-size: 1.25rem;
     border-radius: 0.6rem;
@@ -608,26 +668,26 @@ textarea {
     padding: 1rem 1.5rem;
     margin: 1rem 0;
     box-sizing: border-box;
-    border: 1px solid #A1998A;
-    background-color: #302D2D;
+    border: 1px solid #262626;
+    background-color: #F2EDE6;
     border-radius: 5px;
-    color: #F6F6F6;
+    color: #262626;
     resize: none;
     outline: none;
 }
 
 textarea:focus {
-    border: 3px solid #A1998A;
+    border: 3px solid #FDDC05;
   }
 
 label {
     font-family: Ubuntu;
     font-size: 1rem;
-    color: #f6f6f6;
+    color: #262626;
     margin-bottom: 5rem;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
 
     #ponteen {
      font-size: 4rem;
@@ -685,7 +745,7 @@ footer {
     font-family: Ubuntu;
     font-size: 0.9rem;
     list-style: none;
-    color: #A1998A;
+    color: #262626;
     justify-content: flex-end; /* Align items to the end */
     padding: 0; /* Reset default padding */
     flex-grow: 1; /* Allow ul to grow and take up available space */
@@ -718,7 +778,7 @@ footer {
 /*Desarrollo Web Gallery*/
 
 .projectGallery {
-    margin: 0 15%;
+    margin: 5% 15%;
     display: flex; /* Changed inline-flex to flex */
     flex-wrap: wrap;
     justify-content: space-between;
