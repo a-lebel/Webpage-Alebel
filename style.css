@@ -159,11 +159,13 @@ h1 {
     color: #262626;
     margin-block-start: 5rem;
     margin-block-end: 2rem;
+
     animation: slideup 1s;
 }
 
 h1 span {
         color: #262626;
+
         animation-name: highlight-me;
         animation-duration: 1s;
         animation-fill-mode: forwards;
@@ -207,6 +209,7 @@ button {
 button:hover {
     background-color: #FDDC05;
     color: #FDDC05;
+
     animation-name: highlight-me;
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
@@ -782,6 +785,8 @@ footer {
     display: flex; /* Changed inline-flex to flex */
     flex-wrap: wrap;
     justify-content: space-between;
+
+    animation: slideup 2s ease-in;
 }
 
 .projectContainer {
@@ -797,14 +802,24 @@ footer {
     margin-left: 0;
 }
 
-.projectContainer img {
-    margin-top: 15px;
+.zoom-img {
+    width: 380px;
+    height: 320px;
+    overflow: hidden;
+    margin-top: 2rem;
+  }
+  
+  .zoom-img img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
-    object-position: center;
+    transition: all .3s ease;
+  }
+  
+  .zoom-img img:hover {
+    transform: scale(1.2);
+  }
 
-}
 
 .projectContainer p {
     width: 100%;
@@ -816,10 +831,43 @@ footer {
     margin-top: 2rem;
 }
 
+.projectContainer a:hover {
+    font-family: Ubuntu;
+    font-size: 1.25rem;
+    margin-top: 2rem;
+
+    animation-name: highlight-me;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    background: linear-gradient(to right, #FDDC05 0%, #FDDC05 100%);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+
+}
+
 @media (max-width: 480px) {
     .projectGallery {
         margin: 0 5%;
     } 
 
 
+}
+
+/*Catgorias*/
+
+.vercategorias {
+    margin: 5% 15%;
+
+    animation: slideup 2s ease-in;
+}
+
+.vercategorias button {
+    background-color: #F2EDE6;
+    border: solid 1px #262626;
+    color: #262626;
+    margin-right: 20px;
+}
+
+.vercategorias button:hover {
+    color: #FDDC05;
 }
