@@ -4,10 +4,11 @@
 
 html {
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
-    background: #F2EDE6;
+    background: #fffefc;
     overflow-x: hidden; /* Corrected property name */
 }
 
@@ -23,7 +24,7 @@ nav {
     flex-wrap: wrap;
     align-items: center;
     position: fixed;
-    background-color: #F2EDE6;
+    background-color: #fffefc;
     z-index: 3;
     top: 0;
 }
@@ -54,7 +55,9 @@ li {
 }
 
 li:hover {
-    text-decoration: underline;
+    font-weight: 600;
+    animation-duration: 1s;
+
 }
 
 a:visited {
@@ -154,8 +157,10 @@ a:visited {
 
 
 h1 {
-    font-family: Oswald;
-    font-size: 7.8rem;
+    font-family: Lato;
+    font-weight: 900;
+    font-size: 6.8rem;
+    line-height: 6.3rem;
     color: #262626;
     margin-block-start: 5rem;
     margin-block-end: 2rem;
@@ -165,24 +170,47 @@ h1 {
 
 h1 span {
         color: #262626;
-
-        animation-name: highlight-me;
+        font-family: Playfair Display;
+        font-style: italic;
+        font-weight: 300;
+        /*animation-name: highlight-me;
         animation-duration: 1s;
         animation-fill-mode: forwards;
         background: linear-gradient(to right, #FDDC05 0%, #FDDC05 100%);
         background-repeat: no-repeat;
-        background-size: 0% 100%;
+        background-size: 0% 100%;*/
+}
+
+.portafoliotitulos {
+    font-family: Playfair Display;
+    font-style: italic;
+    font-size: 4rem;
+    margin-block-start: 0;
+    margin-block-end: 1rem;
 }
 
 
 h2 {
+
     font-family: Ubuntu;
     color: #262626;
     font-size: 1.25rem;
  
 }
 
+h3 {
+    font-family: Ubuntu;
+    color: #262626;
+    font-size: 1rem;
+ 
+}
 
+h4 {
+    font-family: Ubuntu;
+    color: #262626;
+    font-size: 0.75rem;
+ 
+}
 
 
 p {
@@ -194,21 +222,23 @@ p {
 
 button {
     padding: 1.56rem 3.12rem;
-    background-color: #FDDC05;
+    background-color: #fdfaf4;
     color: #262626;
     font-family: Ubuntu;
     font-size: 1.25rem;
-    border-radius: 0.6rem;
-    border: none;
+    border-radius: 2px;
+    border: 1px solid #262626;
     margin-top: 2rem;
     cursor: pointer;
-    transition-duration: 0.2s;
+    transition-duration: 1s;
     box-sizing: border-box;
 }
 
 button:hover {
-    background-color: #FDDC05;
-    color: #FDDC05;
+    background-color: #fdfaf4;
+    color: #fdfaf4;
+    font-family: playfair display;
+
 
     animation-name: highlight-me;
     animation-duration: 0.3s;
@@ -245,7 +275,6 @@ header {
 .title {
     width: 100%;
     display: flex;
-    text-transform: uppercase;
     line-height: 7.8rem;
     margin:0;
     transition: color 0.3s ease, font-size 0.3s ease;
@@ -377,62 +406,53 @@ header {
 }
 
 #desarrollo {
-    font-family: Oswald;
+    font-family: Ubuntu;
     font-weight: 700;
     letter-spacing: -0.3rem;
-    font-size: 8.75rem;
+    font-size: 8rem;
     color: #262626;
-    text-transform: uppercase;
+
 }
 
 #web {
-    font-family: Oswald;
-    font-weight: 700;
-    letter-spacing: -0.3rem;
-    font-size: 12.5rem;
-    text-transform: uppercase;
-    line-height: 7rem;
-    color: transparent;
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: #595959;
-    margin-left: 10rem;
+    font-family: Playfair Display;
+    font-weight: 300;
+    font-size: 10rem;
+    line-height: 5rem;
+    color: #262626;
+    /*margin-left: 20rem;*/
+    font-style: italic;
 }
 
 
 #diseño {
-    font-family: Oswald;
+    font-family: Ubuntu;
     font-weight: 700;
     letter-spacing: -0.4rem;
     font-size: 8.75rem;
     color: #262626;
-    text-transform: uppercase;
     white-space: nowrap;
 }
 
 #grafico {
-    font-family: Oswald;
-    font-weight: 700;
-    letter-spacing: -0.3rem;
-    font-size: 10rem;
-    text-transform: uppercase;
+    font-family: Playfair Display;
+    font-weight: 300;
+    font-size: 9rem;
+    font-style: italic;
     line-height: 5rem;
-    color: transparent;
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: #595959;
     margin-left: -5rem;
+    color: #262626;
 }
 
 #ui {
-    font-family: Oswald;
-    font-weight: 700;
+    font-family: Playfair Display;
+    font-weight: 300;
+    font-style: italic;
     letter-spacing: -0.5rem;
     font-size: 8.75rem;
-    text-transform: uppercase;
     line-height: 3rem;
-    color: transparent;
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: #595959;
-    margin-left: 2rem;
+    /*margin-left: 2rem;*/
+    color: #262626;
 
 }
 
@@ -555,11 +575,11 @@ header {
 /* Clientes */
 
 .clients {
-    margin: 10% 15%;
+    margin: 0% 15%;
 
     animation: slideup linear both;
     animation-timeline: view();
-    animation-range: 25vh 75vh;
+    animation-range: 25vh 75vh; 
 }
 
 .clientslogos {
@@ -581,9 +601,13 @@ header {
 }
 
 /* Contacto */
+.hablemos {
+    margin: 5% 15%;
+    text-align: center;
+}
 
 #contactoseccion {
-    margin: 10% 15%;
+    margin: 5% 15%;
 
     animation: slideup linear both;
     animation-timeline: view();
@@ -644,7 +668,7 @@ input {
     margin: 1rem 0;
     box-sizing: border-box;
     border: 1px solid #262626;
-    background-color: #F2EDE6;
+    background-color: #F6f6f6;
     border-radius: 5px;
     color: #262626;
     outline: none;
@@ -672,7 +696,7 @@ textarea {
     margin: 1rem 0;
     box-sizing: border-box;
     border: 1px solid #262626;
-    background-color: #F2EDE6;
+    background-color: #F6f6f6;
     border-radius: 5px;
     color: #262626;
     resize: none;
@@ -778,6 +802,11 @@ footer {
     }
 }
 
+/*Legal Notice */
+
+.legal {
+    margin: 5% 15%
+}
 /*Desarrollo Web Gallery*/
 
 .projectGallery {
@@ -826,22 +855,16 @@ footer {
 }
 
 .projectContainer a {
-    font-family: Ubuntu;
+    font-family: Playfair Display;
+    font-style: italic;
     font-size: 1.25rem;
     margin-top: 2rem;
+    font-weight: 300;
+    text-decoration: none;
 }
 
 .projectContainer a:hover {
-    font-family: Ubuntu;
-    font-size: 1.25rem;
-    margin-top: 2rem;
-
-    animation-name: highlight-me;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    background: linear-gradient(to right, #FDDC05 0%, #FDDC05 100%);
-    background-repeat: no-repeat;
-    background-size: 0% 100%;
+    font-weight: 800;
 
 }
 
@@ -853,21 +876,60 @@ footer {
 
 }
 
-/*Catgorias*/
+/*Categorias*/
 
 .vercategorias {
     margin: 5% 15%;
+    text-align: center;
 
     animation: slideup 2s ease-in;
 }
 
 .vercategorias button {
-    background-color: #F2EDE6;
+    background-color: #F6f6f6;
     border: solid 1px #262626;
     color: #262626;
     margin-right: 20px;
 }
 
 .vercategorias button:hover {
-    color: #FDDC05;
+ 
 }
+
+/*ProteinK*/
+
+.introProyecto {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 10% 15% 0% 15%;
+    justify-content: space-between;
+
+    animation: slideup .75s ease-in;
+}
+
+.introtitulo {
+    width: 40%;
+
+}
+
+.introTexto {
+    width: 60%;
+}
+
+.introimg {
+    margin: 0% 15% 15% 15%;
+    height:100%;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+
+    animation: animate-it 0.75s ease-in;
+}
+
+.introimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: all .3s ease;
+  }
