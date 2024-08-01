@@ -13,7 +13,7 @@ body {
 }
 
 main {
-    margin: 0% 15%;
+    margin: 0% 10%;
 }
 
 
@@ -36,19 +36,19 @@ nav {
 .logo {
     width: 4.8rem;
     height: auto;
-    margin-left: 15%; /* Align with body margin */
+    margin-left: 10%; /* Align with body margin */
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
 nav ul {
     display: flex; /* Set ul as a flex container */
-    font-family: Ubuntu;
+    font-family: 'Roboto';
     font-size: 1rem;
     list-style: none;
     color: #262626;
     justify-content: flex-end; /* Align items to the end */
-    margin: 0 15%; /* Align with body margin */
+    margin: 0 10%; /* Align with body margin */
     padding: 0; /* Reset default padding */
     flex-grow: 1; /* Allow ul to grow and take up available space */
 }
@@ -71,6 +71,7 @@ li:active {
 
 a {
     text-decoration: none;
+    color: #262626;
 }
 
 a:visited {
@@ -175,7 +176,7 @@ a:active {
 
 
 h1 {
-    font-family: Lato;
+    font-family: 'Roboto';
     font-weight: 900;
     font-size: 6.8rem;
     line-height: 6.6rem;
@@ -188,7 +189,7 @@ h1 {
 
 h1 span {
         color: #262626;
-        font-family: Playfair Display;
+        font-family: 'Playfair Display';
         font-style: italic;
         font-weight: 300;
         /*animation-name: highlight-me;
@@ -200,7 +201,7 @@ h1 span {
 }
 
 .portafoliotitulos {
-    font-family: Playfair Display;
+    font-family: 'Playfair Display';
     font-weight: 300;
     font-style: italic;
     font-size: 4rem;
@@ -211,21 +212,21 @@ h1 span {
 
 h2 {
 
-    font-family: Ubuntu;
+    font-family: 'Roboto';
     color: #262626;
     font-size: 1.25rem;
  
 }
 
 h3 {
-    font-family: Ubuntu;
+    font-family: 'Roboto';
     color: #262626;
     font-size: 1rem;
  
 }
 
 h4 {
-    font-family: Ubuntu;
+    font-family: 'Roboto';
     color: #262626;
     font-size: 0.75rem;
  
@@ -233,7 +234,7 @@ h4 {
 
 
 p {
-    font-family: Ubuntu;
+    font-family: 'Roboto';
     font-size: 1rem;
     color: #262626;
 }
@@ -243,7 +244,7 @@ button {
     padding: 1.56rem 3.12rem;
     background-color: #fdfaf4;
     color: #262626;
-    font-family: Playfair Display;
+    font-family: 'Playfair Display';
     font-style: italic;
     font-size: 1.25rem;
     border-radius: 2px;
@@ -276,6 +277,9 @@ button:hover {
     height: 10rem;
 }
 
+hr {
+    border: #262626 1px solid;
+}
 
 /* Header */
 
@@ -283,7 +287,7 @@ header {
     position: relative;
     top: 50px;
     display: flex;
-    margin: 0 15%;
+    margin: 0 10%;
     flex-wrap: wrap;
     justify-content: space-between; /* Distribute space between items */ 
 }
@@ -428,7 +432,7 @@ header {
 }
 
 #desarrollo {
-    font-family: Ubuntu;
+    font-family: 'Roboto';
     font-weight: 700;
     letter-spacing: -0.3rem;
     font-size: 8rem;
@@ -437,7 +441,7 @@ header {
 }
 
 #web {
-    font-family: Playfair Display;
+    font-family: 'Playfair Display';
     font-weight: 300;
     font-size: 8rem;
     line-height: 5rem;
@@ -448,7 +452,7 @@ header {
 
 
 #diseño {
-    font-family: Ubuntu;
+    font-family: 'Roboto';
     font-weight: 700;
     letter-spacing: -0.4rem;
     font-size: 8rem;
@@ -457,7 +461,7 @@ header {
 }
 
 #grafico {
-    font-family: Playfair Display;
+    font-family: 'Playfair Display';
     font-weight: 300;
     font-size: 8rem;
     font-style: italic;
@@ -466,7 +470,7 @@ header {
 }
 
 #ui {
-    font-family: Playfair Display;
+    font-family: 'Playfair Display';
     font-weight: 300;
     font-style: italic;
     letter-spacing: -0.5rem;
@@ -767,7 +771,7 @@ label {
 /* Footer */
 
 footer {
-    margin: 10% 15% 2% 15%;
+    margin: 10% 10% 2% 10%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -787,7 +791,7 @@ footer {
 .footertext ul{
     display: flex; /* Set ul as a flex container */
     flex-wrap: wrap;
-    font-family: Ubuntu;
+    font-family: 'Roboto';
     font-size: 0.9rem;
     list-style: none;
     color: #262626;
@@ -873,7 +877,7 @@ footer {
 }
 
 .projectContainer a {
-    font-family: Playfair Display;
+    font-family: 'Playfair Display';
     font-style: italic;
     font-size: 1.25rem;
     margin-top: 2rem;
@@ -965,4 +969,65 @@ footer {
     font-family: 'Playfair Display', serif;
     font-size: 1.25rem;
     font-style: italic;
+}
+
+/*About*/
+
+.introabout {
+    margin-top: 15%;
+}
+
+.introtext {
+    width: 48%;
+}
+
+#nombreabout {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+    animation: slideup linear both;
+    animation-timeline: view();
+    animation-range: 25vh 75vh;
+}
+
+.fotoabout {
+    height:auto;
+    width: 48%;
+    height: 400px;
+    overflow: hidden;
+
+    animation: animate-it 0.75s ease-in;
+}
+
+.fotoabout img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.skills {
+    margin-top: 2%;
+}
+
+.skills li {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.introservicios {
+    width: 48%;
+
 }
