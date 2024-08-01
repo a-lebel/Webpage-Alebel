@@ -73,6 +73,7 @@ li:active {
 a {
     text-decoration: none;
     color: #262626;
+    transition: 1s;
 }
 
 a:visited {
@@ -914,6 +915,8 @@ footer {
     transition: all .3s ease;
   }
   
+
+  
   .zoom-img img:hover {
     transform: scale(1.2);
   }
@@ -925,14 +928,20 @@ footer {
 }
 
 .projectContainer a {
-    font-family: 'Playfair Display';
-    font-style: italic;
-    font-size: 1.25rem;
-    margin-top: 2rem;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 1rem;
     font-weight: 300;
     text-decoration: none;
+    border-bottom: transparent solid 1px;
+
+    transition: 1s;
+
 }
 
+.projectContainer a:hover {
+    border-color: #262626;
+}
 
 
 
@@ -1014,15 +1023,24 @@ footer {
 .volver a {
     text-decoration: none;
     color: #262626;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.25rem;
-    font-style: italic;
+    font-family: 'Roboto', serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+
+    transition: 1s;
 }
+
+.volver a:hover {
+    font-weight: 500;
+}
+
+
 
 /*About*/
 
 .introabout {
-    margin-top: 15%;
+    margin-top: 5%;
 }
 
 .introtext {
@@ -1063,7 +1081,7 @@ footer {
 
 .fotoabout {
     height:auto;
-    width: 48%;
+    width: 500px;
     height: 400px;
     overflow: hidden;
     border-radius: 25px;
@@ -1073,7 +1091,7 @@ footer {
 
 .fotoabout img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 }
 
