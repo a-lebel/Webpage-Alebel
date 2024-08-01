@@ -8,8 +8,12 @@ html {
 }
 
 body {
-    background: #fffefc;
+    background: #fdfaf4;
     overflow-x: hidden; /* Corrected property name */
+}
+
+main {
+    margin: 0% 15%;
 }
 
 
@@ -24,7 +28,7 @@ nav {
     flex-wrap: wrap;
     align-items: center;
     position: fixed;
-    background-color: #fffefc;
+    background-color: #fdfaf4;
     z-index: 3;
     top: 0;
 }
@@ -55,13 +59,27 @@ li {
 }
 
 li:hover {
-    font-weight: 600;
     animation-duration: 1s;
+    color:#7B7B7B;
 
+}
+ 
+li:active {
+    color:#262626;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 a:visited {
     color: #262626;
+    text-decoration: none;
+}
+
+a:active {
+    color:#262626;
     text-decoration: none;
 }
 
@@ -160,7 +178,7 @@ h1 {
     font-family: Lato;
     font-weight: 900;
     font-size: 6.8rem;
-    line-height: 6.3rem;
+    line-height: 6.6rem;
     color: #262626;
     margin-block-start: 5rem;
     margin-block-end: 2rem;
@@ -183,6 +201,7 @@ h1 span {
 
 .portafoliotitulos {
     font-family: Playfair Display;
+    font-weight: 300;
     font-style: italic;
     font-size: 4rem;
     margin-block-start: 0;
@@ -224,7 +243,8 @@ button {
     padding: 1.56rem 3.12rem;
     background-color: #fdfaf4;
     color: #262626;
-    font-family: Ubuntu;
+    font-family: Playfair Display;
+    font-style: italic;
     font-size: 1.25rem;
     border-radius: 2px;
     border: 1px solid #262626;
@@ -237,7 +257,6 @@ button {
 button:hover {
     background-color: #fdfaf4;
     color: #fdfaf4;
-    font-family: playfair display;
 
 
     animation-name: highlight-me;
@@ -253,6 +272,9 @@ button:hover {
     width: 30%;
 }
 
+.divider {
+    height: 10rem;
+}
 
 
 /* Header */
@@ -329,8 +351,8 @@ header {
 
 
     .title h1 {
-        font-size: 4rem;
-        line-height: 4rem;
+        font-size: 3rem;
+        line-height: 3rem;
         transition: color 0.3s ease, font-size 0.3s ease;
     }
 
@@ -350,7 +372,7 @@ header {
 
 
 .projects1 {
-    margin: 10% 15%;
+    margin: 10% 0%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -361,7 +383,7 @@ header {
 }
 
 .projects2 {
-    margin: 10% 15%;
+    margin: 10% 0%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -417,7 +439,7 @@ header {
 #web {
     font-family: Playfair Display;
     font-weight: 300;
-    font-size: 10rem;
+    font-size: 8rem;
     line-height: 5rem;
     color: #262626;
     /*margin-left: 20rem;*/
@@ -429,7 +451,7 @@ header {
     font-family: Ubuntu;
     font-weight: 700;
     letter-spacing: -0.4rem;
-    font-size: 8.75rem;
+    font-size: 8rem;
     color: #262626;
     white-space: nowrap;
 }
@@ -437,10 +459,9 @@ header {
 #grafico {
     font-family: Playfair Display;
     font-weight: 300;
-    font-size: 9rem;
+    font-size: 8rem;
     font-style: italic;
     line-height: 5rem;
-    margin-left: -5rem;
     color: #262626;
 }
 
@@ -449,7 +470,7 @@ header {
     font-weight: 300;
     font-style: italic;
     letter-spacing: -0.5rem;
-    font-size: 8.75rem;
+    font-size: 8rem;
     line-height: 3rem;
     /*margin-left: 2rem;*/
     color: #262626;
@@ -479,7 +500,7 @@ header {
 }
 
 .projecttexts h2 {
-    margin-top: 2rem;
+    margin-top: 6rem;
 }
 
 
@@ -555,13 +576,9 @@ header {
 }
 
 @media (max-width: 900px) {
-    .projects1 {
+    main {
         margin: 10% 5%;
     }
-
-    .projects2 {
-        margin: 10% 5%;
-    } 
 
     .videoshome {
         width: 100%;
@@ -575,7 +592,7 @@ header {
 /* Clientes */
 
 .clients {
-    margin: 0% 15%;
+
 
     animation: slideup linear both;
     animation-timeline: view();
@@ -602,10 +619,11 @@ header {
 
 /* Contacto */
 .hablemos {
-    margin: 5% 15%;
+    margin: 5% 0%;
     text-align: center;
 }
 
+/*
 #contactoseccion {
     margin: 5% 15%;
 
@@ -744,12 +762,12 @@ label {
         margin: 10% 5%;
     }
 
-}
+} */
 
 /* Footer */
 
 footer {
-    margin:0 15%;
+    margin: 10% 15% 2% 15%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -805,17 +823,17 @@ footer {
 /*Legal Notice */
 
 .legal {
-    margin: 5% 15%
+    margin: 5% 0%
 }
 /*Desarrollo Web Gallery*/
 
 .projectGallery {
-    margin: 5% 15%;
+    margin: 5% 0%;
     display: flex; /* Changed inline-flex to flex */
     flex-wrap: wrap;
     justify-content: space-between;
 
-    animation: slideup 2s ease-in;
+    animation: slideup 1s ease-in;
 }
 
 .projectContainer {
@@ -863,45 +881,17 @@ footer {
     text-decoration: none;
 }
 
-.projectContainer a:hover {
-    font-weight: 800;
-
-}
-
-@media (max-width: 480px) {
-    .projectGallery {
-        margin: 0 5%;
-    } 
 
 
-}
 
-/*Categorias*/
 
-.vercategorias {
-    margin: 5% 15%;
-    text-align: center;
 
-    animation: slideup 2s ease-in;
-}
-
-.vercategorias button {
-    background-color: #F6f6f6;
-    border: solid 1px #262626;
-    color: #262626;
-    margin-right: 20px;
-}
-
-.vercategorias button:hover {
- 
-}
-
-/*ProteinK*/
+/*Proyectos*/
 
 .introProyecto {
     display: inline-flex;
     flex-wrap: wrap;
-    margin: 10% 15% 0% 15%;
+    margin: 10% 15% 2% 15%;
     justify-content: space-between;
 
     animation: slideup .75s ease-in;
@@ -913,14 +903,16 @@ footer {
 }
 
 .introTexto {
-    width: 60%;
+    max-width: 60%;
+    min-width: 300px;
+
 }
 
 .introimg {
-    margin: 0% 15% 15% 15%;
+    margin: 0% 15% 1% 15%;
     height:100%;
     width: auto;
-    height: auto;
+    height: 600px;
     overflow: hidden;
 
     animation: animate-it 0.75s ease-in;
@@ -933,3 +925,44 @@ footer {
 
     transition: all .3s ease;
   }
+
+.imagenesproyecto {
+    margin: 0% 15% 1% 15%;
+    height:100%;
+    width: auto;
+    height: 600px;
+    overflow: hidden;
+    overflow-x: auto;
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    animation: animate-it 0.75s ease-in;
+}
+
+.descriptivo {
+    margin: 5% 15% 5% 15%;
+
+    animation: animate-it 0.75s ease-in;
+}
+
+.imagenesproyecto img {
+    width: 49%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.volver {
+    display: flex;
+    justify-content: space-between; /* Adds space between children */
+    width: 100%; /* Ensure full width for spacing */
+    padding: 1rem; /* Optional: Add some padding for better look */
+}
+
+.volver a {
+    text-decoration: none;
+    color: #262626;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-style: italic;
+}
