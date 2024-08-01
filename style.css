@@ -61,6 +61,7 @@ li {
 li:hover {
     animation-duration: 1s;
     color:#7B7B7B;
+    font-weight: 500;
 
 }
  
@@ -244,15 +245,33 @@ button {
     padding: 1.56rem 3.12rem;
     background-color: #fdfaf4;
     color: #262626;
-    font-family: 'Playfair Display';
-    font-style: italic;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-style: normal;
     font-size: 1.25rem;
-    border-radius: 2px;
+    border-radius: 40px;
     border: 1px solid #262626;
     margin-top: 2rem;
     cursor: pointer;
     transition-duration: 1s;
     box-sizing: border-box;
+}
+
+#primary {
+    background-color: #262626;
+    color: #fdfaf4;
+}
+
+#primary:hover {
+    background-color: #000000;
+    color: #fdfaf4;
+
+    animation-name: highlight-me;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    background: linear-gradient(to right, #000000 0%, #000000 100%);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
 }
 
 button:hover {
@@ -278,7 +297,7 @@ button:hover {
 }
 
 hr {
-    border: #262626 1px solid;
+    border: #262626 0.5px solid;
 }
 
 /* Header */
@@ -290,12 +309,16 @@ header {
     margin: 0 10%;
     flex-wrap: wrap;
     justify-content: space-between; /* Distribute space between items */ 
+
+
 }
 
 .textsheader {
     flex: 1; /* Allow .textsheader to take up available space */
     display: flex;
     flex-wrap: wrap;
+
+    animation: slideup 1s;
 }
 
 .title {
@@ -306,6 +329,13 @@ header {
     transition: color 0.3s ease, font-size 0.3s ease;
 }
 
+.ctas {
+    display: inline-flex;
+}
+
+.ctas button {
+    margin-right: 20px;
+}
 
 .socialhome {
     min-width: 20%;
@@ -313,6 +343,8 @@ header {
     align-items: flex-end;
     text-align: right;
     padding-left: 5rem;
+
+    animation: slideup 1s;
 }
 
 
@@ -417,6 +449,7 @@ header {
     height: 690px;
     overflow: hidden;
     z-index: 0;
+    border-radius: 25px;
 
 
     animation: animate-it linear both;
@@ -431,11 +464,15 @@ header {
     object-position: center;
 }
 
+.descripcionServicio {
+    padding-right: 100px;
+}
+
 #desarrollo {
     font-family: 'Roboto';
     font-weight: 700;
     letter-spacing: -0.3rem;
-    font-size: 8rem;
+    font-size: 7rem;
     color: #262626;
 
 }
@@ -443,7 +480,7 @@ header {
 #web {
     font-family: 'Playfair Display';
     font-weight: 300;
-    font-size: 8rem;
+    font-size: 7rem;
     line-height: 5rem;
     color: #262626;
     /*margin-left: 20rem;*/
@@ -455,7 +492,7 @@ header {
     font-family: 'Roboto';
     font-weight: 700;
     letter-spacing: -0.4rem;
-    font-size: 8rem;
+    font-size: 7rem;
     color: #262626;
     white-space: nowrap;
 }
@@ -463,7 +500,7 @@ header {
 #grafico {
     font-family: 'Playfair Display';
     font-weight: 300;
-    font-size: 8rem;
+    font-size: 7rem;
     font-style: italic;
     line-height: 5rem;
     color: #262626;
@@ -474,7 +511,7 @@ header {
     font-weight: 300;
     font-style: italic;
     letter-spacing: -0.5rem;
-    font-size: 8rem;
+    font-size: 7rem;
     line-height: 3rem;
     /*margin-left: 2rem;*/
     color: #262626;
@@ -490,6 +527,7 @@ header {
     height: 690px;
     overflow: hidden;
     z-index: 0;
+    border-radius: 25px;
 
     animation: animate-it linear both;
     animation-timeline: view();
@@ -591,6 +629,10 @@ header {
     .imagedesarrollo {
     width:100%;
     }
+
+    .descripcionServicio {
+        padding-right: 10px;
+    }
 }
 
 /* Clientes */
@@ -625,6 +667,8 @@ header {
 .hablemos {
     margin: 5% 0%;
     text-align: center;
+
+
 }
 
 /*
@@ -776,6 +820,8 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+
+
 }
 
 .socialfooter {
@@ -829,7 +875,7 @@ footer {
 .legal {
     margin: 5% 0%
 }
-/*Desarrollo Web Gallery*/
+/*Servicios Gallery*/
 
 .projectGallery {
     margin: 5% 0%;
@@ -858,6 +904,7 @@ footer {
     height: 320px;
     overflow: hidden;
     margin-top: 2rem;
+    border-radius: 20px;
   }
   
   .zoom-img img {
@@ -873,6 +920,7 @@ footer {
 
 
 .projectContainer p {
+    padding-top: 15px;
     width: 100%;
 }
 
@@ -988,7 +1036,7 @@ footer {
 }
 
 .about {
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -1000,11 +1048,25 @@ footer {
     animation-range: 25vh 75vh;
 }
 
+.cv {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.introhabilidades {
+    width: 48%;
+}
+
+.introservicios {
+    width: 48%;
+}
+
 .fotoabout {
     height:auto;
     width: 48%;
     height: 400px;
     overflow: hidden;
+    border-radius: 25px;
 
     animation: animate-it 0.75s ease-in;
 }
@@ -1024,10 +1086,23 @@ footer {
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
-    margin-bottom: 1rem;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 15px 20px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    border: #262626 1px solid;
+    border-radius: 25px;
 }
 
-.introservicios {
-    width: 48%;
 
+.cv ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.cv li:hover {
+    color: #262626;
 }
