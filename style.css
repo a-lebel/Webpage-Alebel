@@ -606,9 +606,9 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 50%;
     min-width: 320px;
-    height: 300px;
+    height: auto;
     overflow: hidden;
     z-index: 0;
     margin-top: 5rem;
@@ -619,9 +619,9 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 30%;
     min-width: 320px;
-    height: 300px;
+    height: auto;
     overflow: hidden;
     z-index: 0;
     margin-top: 5rem;
@@ -629,11 +629,11 @@ header {
 
 
 .projecttexts {
-    width: 100%;
+    width: 45%;
     min-width: 320px;
     z-index: 1;
 }
-    
+
 }
 
 @media (max-width: 900px) {
@@ -651,6 +651,12 @@ header {
 
     .descripcionServicio {
         padding-right: 10px;
+    }
+
+    .projecttexts {
+        width: 100%;
+        min-width: 320px;
+        z-index: 1;
     }
 }
 
