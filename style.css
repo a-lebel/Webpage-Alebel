@@ -458,7 +458,7 @@ header {
     height: 690px;
     overflow: hidden;
     z-index: 0;
-    border-radius: 25px;
+
 
 
     animation: animate-it linear both;
@@ -536,7 +536,7 @@ header {
     height: 690px;
     overflow: hidden;
     z-index: 0;
-    border-radius: 25px;
+
 
     animation: animate-it linear both;
     animation-timeline: view();
@@ -560,6 +560,8 @@ header {
    #desarrollo {
     font-size: 4rem;
     letter-spacing: 0rem;
+
+    transition: 1s;
    }
 
    #web {
@@ -567,6 +569,8 @@ header {
     line-height: 2rem;
     margin-left: 0;
     letter-spacing: 0rem;
+
+    transition: 1s;
    }
 
    .projects {
@@ -576,6 +580,8 @@ header {
 #diseño {
     font-size: 4rem;
     letter-spacing: 0rem;
+
+    transition: 1s;
    }
 
 #grafico {
@@ -583,6 +589,8 @@ header {
     line-height: 2rem;
     margin-left: 0;
     letter-spacing: 0rem;
+
+    transition: 1s;
    }
 
    #ui {
@@ -590,6 +598,8 @@ header {
     line-height: 2rem;
     margin-left: 0;
     letter-spacing: 0rem;
+
+    transition: 1s;
    }
 
 .videoshome {
@@ -865,27 +875,30 @@ footer {
 
 @media (max-width: 900px) {
     footer {
-        margin: 10% 5%;
+        margin: 20% 5% 1% 5%;
     }
 
 }
 
-@media (max-width: 480px) {
-    footer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column; /* Align items vertically on small screens */
+    @media (max-width: 480px) {
+        footer {
+            display: flex;
+            justify-content: center; /* Center-align the entire footer */
+            align-items: center;
+            flex-direction: column; /* Align items vertically on small screens */
+        }
+    
+        .socialfooter {
+            justify-content: center; /* Center-align the social icons */
+            margin-bottom: 2rem; /* Add space between social icons and text on small screens */
+        }
+    
+        .footertext ul {
+            text-align: center; /* Center-align text */
+            justify-content: center; /* Center-align the text list */
+        }
     }
 
-    .socialfooter {
-        margin-bottom: 1rem; /* Add space between social icons and text on small screens */
-    }
-
-    .footertext ul {
-        text-align: center; /* Center-align text */
-    }
-}
 
 /*Legal Notice */
 
@@ -904,11 +917,11 @@ footer {
 }
 
 .projectContainer {
-    max-width: 380px;
+    max-width: 30%;
+    min-width: 300px;
     flex: 1 1 auto; /* Allows containers to grow and shrink as needed */
     overflow: hidden;
     margin: 50px 10px;
-
 }
 
 .projectContainer hr {
@@ -917,11 +930,13 @@ footer {
 }
 
 .zoom-img {
-    width: 380px;
+    width: 100%;
     height: 320px;
     overflow: hidden;
     margin-top: 2rem;
-    border-radius: 20px;
+
+    border-radius: 15px;
+
   }
   
   .zoom-img img {
@@ -929,6 +944,8 @@ footer {
     height: 100%;
     object-fit: cover;
     transition: all .3s ease;
+
+    border-radius: 15px;
   }
   
 
@@ -959,6 +976,41 @@ footer {
     border-color: #262626;
 }
 
+@media (max-width: 900px) {
+
+    .projectGallery {
+        margin: 5% 5%;
+    }
+
+    .projectContainer {
+        margin: 5% 0%;
+        min-width: 100%
+    }
+
+    .zoom-img {
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        margin-top: 2rem;
+         
+        border-radius: 15px;
+
+      }
+
+    .zoom-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all .3s ease;
+
+        border-radius: 15px;
+      }
+
+
+
+    }
+
+
 
 
 
@@ -982,14 +1034,17 @@ footer {
 .introTexto {
     max-width: 60%;
     min-width: 300px;
-
 }
 
-.introimg {
+.imagenes {
     margin: 0% 15% 1% 15%;
     height:100%;
     width: auto;
-    height: 600px;
+}
+
+.introimg {
+    height:auto;
+    width: 100%;
     overflow: hidden;
 
     animation: animate-it 0.75s ease-in;
@@ -1005,8 +1060,8 @@ footer {
   }
 
 .imagenesproyecto {
-    margin: 0% 15% 1% 15%;
-    height: 100%;
+    margin-top: 1%;
+    height: auto;
     width: 100%; /* Use full width of the parent */
     overflow: hidden;
     overflow-x: auto;
@@ -1017,7 +1072,7 @@ footer {
 }
 
 .descriptivo {
-    margin: 5% 15% 5% 15%;
+    margin: 2% 0%;
 
     animation: animate-it 0.75s ease-in;
 }
@@ -1054,17 +1109,24 @@ footer {
 @media (max-width: 900px) {
     .introProyecto {
         margin: 20% 5% 2% 5%;
+        width: 100%;
     }
-    .introimg {
+
+    .introtitulo {
+        width: 100%;
+    }
+
+    .introTexto {
+        min-width: 90%;
+        margin-bottom: 10px; /* Add some space between text and image */
+    }
+
+    .imagenes {
         margin: 0% 5% 1% 5%;
-        width:100%;
-        margin-bottom: 10px; /* Add some space between images vertically */
-        justify-content: center;
     }
+
     .imagenesproyecto {
-            margin: 0% 5% 1% 5%;
-            width: 100%;
-            justify-content: center;
+        margin-top: 1%;
     }
 
     .imagenesproyecto img {
@@ -1072,9 +1134,6 @@ footer {
         margin-bottom: 10px; /* Add some space between images vertically */
     }
 
-    .descriptivo {
-        margin: 5% 5% 5% 5%;    
-    }
     .volver {
         margin-top: 10%;
     }
@@ -1133,7 +1192,7 @@ footer {
     width: 500px;
     height: 400px;
     overflow: hidden;
-    border-radius: 25px;
+    border-radius: 15px;
 
     animation: animate-it 0.75s ease-in;
 }
@@ -1142,6 +1201,8 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    border-radius: 15px;
 }
 
 .skills {
@@ -1173,3 +1234,69 @@ footer {
 .cv li:hover {
     color: #262626;
 }
+
+@media (max-width: 900px) {
+
+    .introabout {
+        margin-top: 20%;
+    }
+
+    .introtext {
+        width: 100%;
+    }
+
+    .about {
+        margin-top: 5%;
+
+        margin-bottom: 5%;
+    }
+
+    .fotoabout {
+        width: 100%;
+        height: auto;
+        margin-top: 10%;
+    }
+
+    .introhabilidades {
+        width: 100%;
+    }
+
+
+    .introservicios {
+        width: 100%;
+    }
+
+    .skills {
+        margin-top: 10%;
+    }
+
+    .skills li {
+        font-size: 1rem;
+    }
+
+    .cv {
+        margin-top: 10%;
+    }
+
+    .cv li {
+        font-size: 1rem;
+    }
+
+    .cv li:hover {
+        color: #262626;
+    }
+
+    .cv ul {
+        list-style-type: none;
+        padding-left: 0px;
+    }
+
+    .introtext .portafoliotitulos {
+        font-size: 3rem;
+
+        transition: 1s;
+    }
+    
+}
+
+
