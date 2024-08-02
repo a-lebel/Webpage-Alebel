@@ -391,7 +391,7 @@ header {
     .title h1 {
         font-size: 3rem;
         line-height: 3rem;
-        transition: color 0.3s ease, font-size 0.3s ease;
+        transition: color 0.3s ease, font-size 1s ease;
     }
 
     .bienvenida {
@@ -905,6 +905,27 @@ footer {
 .legal {
     margin: 5% 0%
 }
+
+.tituloLegal {
+    font-size: 5rem;
+}
+
+@media (max-width: 900px) {
+    .legal {
+        margin: 10% 5%;
+    }
+
+    .tituloLegal {
+        font-size: 3rem;
+        transition: 1s;
+        margin: 10% 5%;
+    }
+
+    .textosLegales {
+        width: 100%;
+    }
+}
+    
 /*Servicios Gallery*/
 
 .projectGallery {
@@ -1006,7 +1027,13 @@ footer {
         border-radius: 15px;
       }
 
+    .titleServicios {
+        margin: 1% 5%;
+    }
 
+    .titleServicios h1 {
+        font-size: 3rem;
+    }
 
     }
 
@@ -1114,6 +1141,7 @@ footer {
 
     .introtitulo {
         width: 100%;
+        margin-top: 20px;
     }
 
     .introTexto {
@@ -1138,7 +1166,7 @@ footer {
         margin-top: 10%;
     }
     .volver a {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }
 
@@ -1238,7 +1266,7 @@ footer {
 @media (max-width: 900px) {
 
     .introabout {
-        margin-top: 20%;
+        margin-top: 100px;
     }
 
     .introtext {
@@ -1292,8 +1320,7 @@ footer {
     }
 
     .introtext .portafoliotitulos {
-        font-size: 3rem;
-
+        font-size: 2.5rem;
         transition: 1s;
     }
     
