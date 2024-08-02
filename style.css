@@ -243,13 +243,13 @@ p {
 
 
 button {
-    padding: 1.56rem 3.12rem;
+    padding: 1rem 1.5rem;
     background-color: #fdfaf4;
     color: #262626;
     font-family: 'Roboto';
     font-weight: 300;
     font-style: normal;
-    font-size: 1.25rem;
+    font-size: 1rem;
     border-radius: 40px;
     border: 1px solid #262626;
     margin-top: 2rem;
@@ -308,6 +308,7 @@ header {
     top: 50px;
     display: flex;
     margin: 0 10%;
+    padding-top: 50px; 
     flex-wrap: wrap;
     justify-content: space-between; /* Distribute space between items */ 
 
@@ -413,6 +414,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
 
     animation: slideup linear both;
     animation-timeline: view();
@@ -425,6 +427,7 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     flex-direction: row-reverse;
+    align-items: center;
 
     animation: slideup linear both;
     animation-timeline: view();
@@ -439,6 +442,11 @@ header {
     animation: entradaIzq linear both;
     animation-timeline: view();
     animation-range: 25vh 75vh;
+}
+
+.diseñoGrafico {
+    margin-top: 15px;
+
 }
 
 .imagedesarrollo {
@@ -666,12 +674,20 @@ header {
 
 /* Contacto */
 .hablemos {
-    margin: 5% 0%;
+    margin: 10% 0%;
     text-align: center;
-
-
 }
 
+.lastcta {
+    font-family: 'Roboto';
+    font-size: 3rem;
+}
+
+.lastctaitalic {
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: 500;
+}
 /*
 #contactoseccion {
     margin: 5% 15%;
@@ -983,21 +999,20 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 15px;
 
     transition: all .3s ease;
   }
 
 .imagenesproyecto {
     margin: 0% 15% 1% 15%;
-    height:100%;
-    width: auto;
-    height: 600px;
+    height: 100%;
+    width: 100%; /* Use full width of the parent */
     overflow: hidden;
     overflow-x: auto;
     display: flex;  
     flex-wrap: wrap;
     justify-content: space-between;
-
     animation: animate-it 0.75s ease-in;
 }
 
@@ -1011,6 +1026,7 @@ footer {
     width: 49%;
     height: 400px;
     object-fit: cover;
+    border-radius: 15px;
 }
 
 .volver {
@@ -1034,6 +1050,39 @@ footer {
 .volver a:hover {
     font-weight: 500;
 }
+
+@media (max-width: 900px) {
+    .introProyecto {
+        margin: 20% 5% 2% 5%;
+    }
+    .introimg {
+        margin: 0% 5% 1% 5%;
+        width:100%;
+        margin-bottom: 10px; /* Add some space between images vertically */
+        justify-content: center;
+    }
+    .imagenesproyecto {
+            margin: 0% 5% 1% 5%;
+            width: 100%;
+            justify-content: center;
+    }
+
+    .imagenesproyecto img {
+        width: 100%; /* Allow images to take full width in their container */
+        margin-bottom: 10px; /* Add some space between images vertically */
+    }
+
+    .descriptivo {
+        margin: 5% 5% 5% 5%;    
+    }
+    .volver {
+        margin-top: 10%;
+    }
+    .volver a {
+        font-size: 1rem;
+    }
+}
+
 
 
 
