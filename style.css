@@ -6,18 +6,44 @@
 html {
     font-size: 16px;
     scroll-behavior: smooth;
+
 }
 
 body {
     background: #fdfaf4;
     overflow-x: hidden; /* Corrected property name */
-
+    cursor: url('./Resources/images/cursor.svg'), auto;
 }
 
 main {
     margin: 0% 10%;
 }
 
+.circle {
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgba(239, 232, 218, 0.8);
+    pointer-events: none;
+    z-index: 9999;
+    transition: all 0.1s ease;
+    transform: translate(-1%, -1%);
+    mix-blend-mode: multiply;
+
+}
+
+.circle-clickable {
+    background-color: rgba(38, 38, 38, 0.5);
+    transform: scale(1.5);
+    z-index: 9999;
+    pointer-events: none;
+
+    transition: all 0.1s ease;
+}
+
+
+    
 
 
 /* Nav */
@@ -53,11 +79,13 @@ nav ul {
     margin: 0 10%; /* Align with body margin */
     padding: 0; /* Reset default padding */
     flex-grow: 1; /* Allow ul to grow and take up available space */
+
+
 }
 
 li {
     padding: 0 0 0 1.8rem;
-    cursor: pointer;
+
 }
 
 li:hover {
@@ -76,6 +104,8 @@ a {
     text-decoration: none;
     color: #262626;
     transition: 1s;
+
+
 }
 
 a:visited {
@@ -255,7 +285,7 @@ button {
     border-radius: 40px;
     border: 1px solid #262626;
     margin-top: 2rem;
-    cursor: pointer;
+
     transition-duration: 1s;
     box-sizing: border-box;
 }
@@ -339,6 +369,7 @@ header {
 
 .ctas button {
     margin-right: 20px;
+
 }
 
 .socialhome {
@@ -361,6 +392,7 @@ header {
 .sociallogos a {
     padding-left: 1.5rem;
     padding-top: 1.5rem;
+
 }
 
 .bienvenida {
@@ -887,6 +919,7 @@ footer {
 
 .socialfooter a {
     padding-right: 1.5rem;
+
 }
 
 .footertext ul{
@@ -971,6 +1004,7 @@ footer {
     flex: 1 1 auto; /* Allows containers to grow and shrink as needed */
     overflow: hidden;
     margin: 50px 10px;
+
 }
 
 .projectContainer hr {
@@ -1018,6 +1052,8 @@ footer {
     border-bottom: transparent solid 1px;
 
     transition: 1s;
+
+
 
 }
 
@@ -1300,7 +1336,7 @@ footer {
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    cursor: default;
+
 
     padding: 15px 20px;
     margin-right: 10px;
