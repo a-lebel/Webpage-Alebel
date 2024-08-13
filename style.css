@@ -1182,6 +1182,11 @@ footer {
     font-weight: 500;
 }
 
+.internallink {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
 @media (max-width: 900px) {
     .introProyecto {
         margin: 20% 5% 2% 5%;
@@ -1314,6 +1319,15 @@ footer {
     color: #262626;
 }
 
+@media (max-width: 1200px) {
+    .portafoliotitulos {
+        font-size: 2.6rem;
+        line-height: 3rem;
+        
+        transition: 1s;
+    }
+} 
+
 @media (max-width: 900px) {
 
     .introabout {
@@ -1373,6 +1387,7 @@ footer {
     .portafoliotitulos {
         font-size: 2.6rem;
         transition: 1s;
+        line-height: 3rem;
         
     }
     
