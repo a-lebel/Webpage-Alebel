@@ -45,7 +45,7 @@ nav {
 
 nav ul {
     display: flex; /* Set ul as a flex container */
-    font-family: 'Roboto';
+    font-family: 'Bricolage Grotesque', sans-serif;
     font-size: 1rem;
     list-style: none;
     color: #262626;
@@ -193,8 +193,8 @@ h1 {
 
 h1 span {
         color: #262626;
-        font-family: 'Playfair Display';
-        font-style: italic;
+        font-family: 'Bricolage Grotesque', sans-serif;
+        font-style: normal;
         font-weight: 300;
         /*animation-name: highlight-me;
         animation-duration: 1s;
@@ -205,9 +205,9 @@ h1 span {
 }
 
 .portafoliotitulos {
-    font-family: 'Playfair Display';
-    font-weight: 300;
-    font-style: italic;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 600;
+    font-style: normal;
     font-size: 4rem;
     margin-block-start: 0;
     margin-block-end: 1rem;
@@ -497,39 +497,38 @@ header {
 }
 
 #web {
-    font-family: 'Playfair Display';
+    font-family: 'Bricolage Grotesque', sans-serif;
     font-weight: 300;
     font-size: 7rem;
     line-height: 5rem;
     color: #262626;
     /*margin-left: 20rem;*/
-    font-style: italic;
+    font-style: normal;
 }
 
 
 #diseño {
     font-family: 'Roboto';
     font-weight: 700;
-    letter-spacing: -0.4rem;
+    letter-spacing: -0.1rem;
     font-size: 7rem;
     color: #262626;
     white-space: nowrap;
 }
 
 #grafico {
-    font-family: 'Playfair Display';
+    font-family: 'Bricolage Grotesque', sans-serif;
     font-weight: 300;
     font-size: 7rem;
-    font-style: italic;
+    font-style: normal;
     line-height: 5rem;
     color: #262626;
 }
 
 #ui {
-    font-family: 'Playfair Display';
+    font-family: 'Bricolage Grotesque', sans-serif;
     font-weight: 300;
-    font-style: italic;
-    letter-spacing: -0.5rem;
+    font-style: normal;
     font-size: 7rem;
     line-height: 3rem;
     /*margin-left: 2rem;*/
@@ -719,12 +718,13 @@ header {
 .lastcta {
     font-family: 'Roboto';
     font-size: 3rem;
+    font-weight: 300;
 }
 
 .lastctaitalic {
-    font-family: 'Playfair Display';
-    font-style: italic;
-    font-weight: 500;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-style: normal;
+    font-weight: 600;
 }
 /*
 #contactoseccion {
