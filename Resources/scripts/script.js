@@ -21,3 +21,12 @@ function animate() {
 
 animate();
 
+function triggerOverlayAnimation(delay) {
+  setTimeout(function() {
+      document.getElementById('overlay').classList.add('slide-up');
+  }, delay);
+}
+
+window.addEventListener('load', function() {
+  triggerOverlayAnimation(20); // Adjust the delay as needed
+});
