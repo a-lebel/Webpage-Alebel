@@ -147,7 +147,7 @@ a:active {
     }
 
     .logo {
-        margin: 1rem auto; /* Reduced margin to ensure better centering */
+        margin: 0.8rem auto; /* Reduced margin to ensure better centering */
     }
 
     nav ul {
@@ -461,6 +461,16 @@ header {
     header {
         margin: 0 5%;
     }
+
+    p {
+        font-size: 0.9rem;
+
+        transition: 1s;
+    }
+
+    button {
+        font-size: 0.8rem;
+    }
 }
 
 
@@ -619,14 +629,14 @@ header {
 @media (max-width: 1500px) {
 
    #desarrollo {
-    font-size: 4rem;
+    font-size: 3.5rem;
     letter-spacing: 0rem;
 
     transition: 1s;
    }
 
    #web {
-    font-size: 4rem;
+    font-size: 3.5rem;
     line-height: 2rem;
     margin-left: 0;
     letter-spacing: 0rem;
@@ -997,7 +1007,7 @@ footer {
     }
 
     .tituloLegal {
-        font-size: 3rem;
+        font-size: 2.5rem;
         transition: 1s;
         margin: 10% 5%;
     }
@@ -1456,7 +1466,7 @@ footer {
     }
 
     .lastcta {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     
     .circle {
