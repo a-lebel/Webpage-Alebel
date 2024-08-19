@@ -1462,7 +1462,14 @@ footer {
         font-size: 2.6rem;
         transition: 1s;
         line-height: 3rem;
+        margin-top: 50px;
         
+    }
+
+    #nombreabout {
+        margin-top: 20px;
+        font-size: 2.5rem;
+        transition: 1s;
     }
 
     .lastcta {
