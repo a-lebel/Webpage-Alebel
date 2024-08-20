@@ -30,3 +30,13 @@ function triggerOverlayAnimation(delay) {
 window.addEventListener('load', function() {
   triggerOverlayAnimation(20); // Adjust the delay as needed
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const burgerIcon = document.querySelector('.burger-icon');
+  const navLinks = document.querySelector('.nav-links');
+
+  burgerIcon.addEventListener('click', () => {
+      burgerIcon.classList.toggle('active');
+      navLinks.classList.toggle('show');
+  });
+});

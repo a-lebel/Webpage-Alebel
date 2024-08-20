@@ -66,6 +66,38 @@ main {
 
 /* Nav */
 
+/* Burger menu icon styles */
+.burger-icon {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.burger-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #333; /* Adjust to match your design */
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Active state for the burger icon when clicked */
+.burger-icon.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-icon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-icon.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
 nav {
     display: flex;  
     padding-top: 1rem;
@@ -87,8 +119,19 @@ nav {
     margin-bottom: 1rem;
 }
 
+.botonesnav {
+    display: flex;
+    justify-content: center; /* Centers the nav content */
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: 5%; /* Align with body margin */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 nav ul {
     display: flex; /* Set ul as a flex container */
+    flex-wrap: wrap;
     font-family: 'Bricolage Grotesque', sans-serif;
     font-size: 1rem;
     list-style: none;
@@ -103,7 +146,32 @@ nav ul {
 
 li {
     padding: 0 0 0 1.8rem;
+}
 
+.botonesidiomas {
+    display: inline-flex;
+    justify-content: flex-end; /* Align items to the end */
+    align-items: center;
+}
+
+.botonidioma {
+    font-weight: 400;
+    padding: 0;
+}
+
+.botonidioma:hover {
+    color: #262626;
+    font-weight: 600;
+}
+
+
+#idiomaactual {
+    font-weight: 900;
+}
+
+.separator {
+    font-weight: 400;
+    padding: 0 10px 4px 10px;
 }
 
 li:hover {
@@ -137,29 +205,95 @@ a:active {
 }
 
 
-@media (max-width: 635px) {
+/* Hide the navigation links on mobile devices */
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 20px;
+}
 
+/* When on a mobile screen, hide the links */
+@media screen and (max-width: 768px) {
     nav {
-        justify-content: center; /* Corrected property value */
-        flex-direction: column;
-        margin: 0;
-        padding: 0;
+        padding: 5% 5% 0 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
     }
 
     .logo {
-        margin: 0.8rem auto; /* Reduced margin to ensure better centering */
+        display: block;
+        padding: 10px;
+        margin: 0;
     }
 
-    nav ul {
+    /* Align the logo and burger icon inline */
+    .burger-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    /* Adjust the size and positioning of the logo */
+
+    .burger-icon {
+        flex: 0 0 auto; /* Ensure the burger icon does not shrink or grow */
+        z-index: 1500;
+    }
+
+    /* Hide nav links initially */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: #fdfaf4;
+        padding-top: 100px;
+        padding-left: 30px;
+        transition: left 0.3s ease;
+        z-index: 1000;
+        justify-content: flex-start;
+        box-shadow: rgba(38, 38, 38, 0.1) 0px 0px 10px;
+    }
+
+    .nav-links.show {
+        display: flex;
+        left: 0;
+
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        padding: 0;
+        padding-left: 25px;
+    }
+
+    .botonesnav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         justify-content: center;
-        margin: 0; /* Removed margin to avoid pushing items away from the center */
-        padding: 0; /* Ensure padding is reset */
     }
 
-    li {
-        padding: 0.5rem; /* Ensure padding is reduced for smaller screens */
+    .botonesidiomas {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start
+
     }
 }
+
+
+
 
 
 /*Animations*/
