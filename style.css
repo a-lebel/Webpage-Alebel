@@ -1129,6 +1129,7 @@ footer {
     
         .socialfooter {
             justify-content: center; /* Center-align the social icons */
+            width: 100%;
             margin-bottom: 2rem; /* Add space between social icons and text on small screens */
         }
     
@@ -1137,9 +1138,13 @@ footer {
             justify-content: center; /* Center-align the text list */
         }
 
-        .socialfooter li { 
-            padding: 2%;
+        .socialfooter a { 
+            padding: 5%;
     }
+
+        footer li {
+            padding: 2%;
+        }
 }
 
 
