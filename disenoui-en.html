@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="./style.css">
-    <title>Alebel Design - Desarrollo Web</title>
+    <title>Alebel Design - UI Design</title>
     <link rel="shortcut icon" type="image/svg" href="./Resources/images/favicon.svg"/>
 </head>
 <body>
@@ -15,7 +15,7 @@
     <div id="circleId" class="circle"></div>
     
     <nav>
-        <a class="logo" href="./index.html">
+        <a class="logo" href="./index-en.html">
         <img src="./Resources/images/1Recurso 1LogoALB.svg" alt="LogoALB">
         </a>
         <div class="burger-icon">
@@ -25,22 +25,22 @@
         </div>
         <ul class="nav-links">
             <div class="botonesnav">
-            <li><a href="./index.html">Inicio</a></li>
-            <li><a href="./about.html">Conóceme</a></li>
-            <li><a href="mailto:alejandralebel@gmail.com">Escríbeme</a></li>
+            <li><a href="./index-en.html">Home</a></li>
+            <li><a href="./about-en.html">About</a></li>
+            <li><a href="mailto:alejandralebel@gmail.com">Message me</a></li>
             </div>
 
             <div class="botonesidiomas">
-            <li class="botonidioma"><a href="./desarrollo-en.html">EN</a></li>
+            <li class="botonidioma" id="idiomaactual"><a href="./disenoui-en.html">EN</a></li>
             <span class="separator">|</span>
-            <li class="botonidioma" id="idiomaactual"><a href="./desarrollo.html">ES</a></li>
+            <li class="botonidioma" ><a href="./diseno.html">ES</a></li>
             </div>
         </ul>
     </nav>
 
         <header>
             <div class="titleServicios">           
-                    <h1>Desarrollo<span> Web</span></h1>           
+                    <h1>App & Web<span> <br>Design</span></h1>           
             </div>
         </header>
        
@@ -48,62 +48,63 @@
             
             <section class="projectGallery">
                 <div class="projectContainer">
-                    <h2 class="GalleryTitulos">FlickFinder</h2>
+                    <h2 class="GalleryTitulos">El CoCo App</h2>
                
                     <div class="zoom-img">
-                        <a href="./flickfinder.html"><img src="./Resources/images/flickfinder1.jpg" alt=""></a>
+                        <a href="./coco-en.html"><img src="./Resources/images/elcoco1.jpg" alt=""></a>
                     </div>
-
-                    <!--<p>FlickFinder es una aplicación de React y Redux diseñada para ayudar a los usuarios a descubrir y buscar películas. Los usuarios pueden buscar por varios criterios, como género, año o actores, y ver información detallada sobre cada película.</p>
-                    <a href="./flickfinder.html" class="seguirleyendo">Seguir leyendo →</a>-->
+                    <!--<p>El Coco es una aplicación móvil que te ayuda a tomar decisiones saludables al escanear productos y ofrecer recetas y consejos prácticos. Descubre cómo su diseño intuitivo transforma tus compras diarias.</p>
+                    <a href="./coco.html" class="seguirleyendo">Seguir leyendo →</a>-->
                 </div>
 
-                <!--
                 <div class="projectContainer">
-                    <h2>Ketterer Pan Alemán</h2>
+                    <h2 class="GalleryTitulos">Pasiona</h2>
     
                     <div class="zoom-img">
-                        <a href="./Ketterer.html"><img src="./Resources/images/KettererGallery.png" alt=""></a>
+                        <a href="./pasiona-en.html"><img src="./Resources/images/pasiona1.jpg" alt=""></a>
                     </div>
-
-                    <p>Descubre cómo el rediseño de etiquetas para Ketterer Pan Alemán combina tradición y modernidad, destacando la calidad artesanal y los ingredientes naturales de sus productos.</p>
-                    <a href="./Ketterer.html" class="seguirleyendo">Seguir leyendo →</a>
+                    <!--<p>Durante dos años, hemos transformado la presencia digital de Pasiona con un rediseño web que equilibra modernidad y tradición. Descubre cómo nuestra colaboración ha revitalizado su imagen corporativa con un diseño más atractivo y funcional.</p>
+                    <a href="./pasiona.html" class="seguirleyendo">Seguir leyendo →</a>-->
                 </div>
                 
                 <div class="projectContainer">
-                    <h2>CityPro Catalogue</h2>
+                    <h2 class="GalleryTitulos">Esade</h2>
 
                     <div class="zoom-img">
-                        <a href="./citypro.html"><img src="./Resources/images/CityproGallery.png" alt=""></a>
+                        <a href="./esadedigital-en.html"><img src="./Resources/images/esade1.jpg" alt=""></a>
                     </div>
-                    <p>Explora cómo el brochure impreso para City Pro Design & Building destaca sus mejores proyectos de arquitectura y diseño de interiores mediante un diseño visualmente impactante que equilibra imágenes y texto.</p>
-                    <a href="./citypro.html" class="seguirleyendo">Seguir leyendo →</a>
+                    <!--<p>Descubre el diseño de una publicación digital para Esade, realizado en colaboración con WebPublication, utilizando su plugin exclusivo y Adobe InDesign. Este proyecto combina creatividad y tecnología para ofrecer un resultado innovador y visualmente impactante.</p>
+                    <a href="./esadedigital.html" class="seguirleyendo">Seguir leyendo →</a>-->
                 </div>
-
-                <div class="projectContainer">
-                    <h2>Borchure Esade</h2>
-
-                    <div class="zoom-img">
-                        <a href="./esade.html"><img src="./Resources/images/esadeprint1.jpg" alt=""></a>
-                    </div>
-                    <p>Proyecto realizado para Esade en colaboración con WebPublication y bajo su dirección creativa. Descubre su diseño visualmente impactante, combinando textos, imágenes y gráficos. </p>
-                    <a href="./esade.html" class="seguirleyendo">Seguir leyendo →</a>
-                </div>
-                -->
             </section>
             <section class="vercategorias">
                 <hr>
-                <h2 class="GalleryTitulos">Otros servicios</h2>
-                <a href="./diseno.html">
-                <button class="vermas">Diseño gráfico</button>
+                <h2 class="GalleryTitulos">Other services</h2>
+                <a href="./diseno-en.html">
+                <button class="vermas">Graphic Design</button>
                 </a>
-                <a href="./disenoui.html">
-                <button class="vermas">Diseño apps y web</button>
+                <a href="./desarrollo-en.html">
+                <button class="vermas">Web Development</button>
                 </a>
             </section>
 
 
  <!--
+
+            <section class="vercategorias">
+                <h2>Ver más proyectos</h2>
+                <div class="categorias">
+                    <a href="./desarrollo.html">
+                        <button>Desarrollo web</button>
+                    </a>
+                    <a href="./desarrollo.html">
+                        <button>Diseño UI</button>
+                    </a>
+                </div>
+            </section>
+
+       
+
         <section id="contactoseccion">
             <h2>04 Contacto</h2>
             <hr>
@@ -146,8 +147,8 @@
         </div>
         <div class="footertext">
             <ul>
-                <li><a href="./TermsConditions.html">Terms & Conditions</a></li>
-                <li><a href="./Cookies.html">Cookies policy</a></li>
+                <li><a href="./TermsConditions-en.html">Terms & Conditions</a></li>
+                <li><a href="./Cookies-en.html">Cookies policy</a></li>
                 <li>© 2024 A-LeBel Design</li>
             </ul>
         </div>
